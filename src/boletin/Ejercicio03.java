@@ -6,18 +6,22 @@ public class Ejercicio03 {
 
 	public static void main(String[] args) {
 
-		//Declaramos las variables.
+		//Declaramos las variables para los coeficientes.
 		int coefA;
 		int coefB;
 		int coefC;
+		
+		//Declaramos la variable para el discriminante.
 		int discriminante;
+		
+		//Declaramos las variables para las respuestas.
 		double solucionPositiva;
 		double solucionNegativa;
 		
 		//Preparamos el scanner.
 		Scanner reader = new Scanner (System.in);
 		
-		//Preguntamos al usuario y almacenamos las respuestas.
+		//Preguntamos al usuario.
 		System.out.println("Introduzca el valor del coeficiente a: ");
 		coefA = reader.nextInt();
 		
@@ -27,9 +31,10 @@ public class Ejercicio03 {
 		System.out.println("Introduzca el valor del coeficiente c: ");
 		coefC = reader.nextInt();
 		
-		//Declaramos el condicional.
+		//Declaramos el discriminante.
 		discriminante = (coefB * coefB) - 4 * coefA * coefC;
 		
+		//Declaramos la condicional.
 		if (discriminante > 0) {
 			
 			solucionPositiva = ((- coefB + Math.sqrt(discriminante)) /2 * coefA);
