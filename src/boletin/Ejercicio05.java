@@ -6,14 +6,14 @@ public class Ejercicio05 {
 
 	public static void main(String[] args) {
 
-		// Declaramos la variable.
+		// Declaramos las variables de las respuestas de los usuarios.
 		String respuesta1;
 		String respuesta2;
 
 		// Preparamos el scanner.
 		Scanner reader = new Scanner(System.in);
 
-		// Preguntamos al usuario.
+		// Preguntamos a los usuarios.
 		System.out.println("Jugador1, ¿piedra, papel o tijeras? ");
 		respuesta1 = reader.nextLine();
 

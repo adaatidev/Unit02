@@ -12,7 +12,7 @@ public class Ejercicio01 {
 		//Preparamos el scanner.
 		Scanner reader = new Scanner (System.in);
 		
-		//Realizamos la pregunta al usuario y almacenamos la respuesta.
+		//Realizamos la pregunta al usuario.
 		System.out.println("Introduzca un número: ");
 		num = reader.nextInt();
 		
