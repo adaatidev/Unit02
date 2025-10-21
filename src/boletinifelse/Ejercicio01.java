@@ -1,4 +1,4 @@
-package boletin;
+package boletinifelse;
 
 import java.util.Scanner;
 
