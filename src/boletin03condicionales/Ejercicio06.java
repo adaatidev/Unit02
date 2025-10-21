@@ -24,18 +24,26 @@ public class Ejercicio06 {
 		//Calculamos si el año es bisiesto o no. Si al dividirlo entre 4 el resultado es entero es bisiesto, sino no.
 		bisiesto = ano % 4 != 0;
 		
-		if (bisiesto == true && mes <= 7 && mes >= 1) {
+		if (bisiesto && mes <= 7 && mes >= 1) {
 			System.out.println("El año no es bisiesto.");
-		} else if (bisiesto == false && mes <= 7 && mes >= 1) {
+		} else if (bisiesto && mes <= 7 && mes >= 1) {
 			System.out.println("El año no es bisiesto.");
-		} else if (bisiesto == false && mes == 2) {
+		} else if (bisiesto && mes == 2) {
 			System.out.println("El año es bisiesto.");
 			System.out.println("El mes que has elegido tiene 29 días.");
 		} else {
 			System.out.println("El mes debe ser del 1 al 7.");
 		}
 		
-		case
+		if (mes % 2 == 0 && mes != 2) {
+			System.out.println("El mes tiene 30 días.");
+		} else if (mes % 2 != 0) {
+			System.out.println("El mes tiene 31 días.");
+		} else if (bisiesto) {
+			System.out.println("Tiene 29 días");
+		} else {
+			System.out.println("Tiene 28 días");
+		}
 		
 		//Cerramos el scanner.
 		reader.close();

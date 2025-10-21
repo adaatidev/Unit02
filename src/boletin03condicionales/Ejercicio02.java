@@ -6,8 +6,14 @@ public class Ejercicio02 {
 
 	public static void main(String[] args) {
 
+		/*
+		 * Utiliza un operador ternario para calcular el valor absoluto de un número que
+		 * se solicita al usuario por teclado.
+		 */
+
 		// Declaramos la variable que va a tomar el número que introduzca el usuario.
 		int numero;
+		int valorAbsoluto;
 
 		// Preparamos el scanner.
 		Scanner reader = new Scanner(System.in);
@@ -18,13 +24,9 @@ public class Ejercicio02 {
 
 		// Declaramos el condicional, si el número es positivo permanece igual y si es
 		// negativo pasa a ser positivo.
-		if (numero >= 0) {
-			System.out.println("Valor absoluto: " + numero);
-		} else {
-			numero = numero * -1;
-			System.out.println("Valor absoluto: " + numero);
-		}
-
+		valorAbsoluto = numero >= 0 ? numero : numero * -1;
+		System.out.println("Su valor absoluto es: " + valorAbsoluto);
+		
 		// Cerramos el scanner.
 		reader.close();
 
