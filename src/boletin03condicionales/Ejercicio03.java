@@ -6,7 +6,8 @@ public class Ejercicio03 {
 
 	public static void main(String[] args) {
 
-		// Declaramos la variable para el número del DNI.
+		// Declaramos la variable para el número del DNI del usuario, otra para la letra
+		// (en números enteros) y la letra del DNI que va a mostrar.
 		int numeroDNI;
 		int letra;
 		char letraDNI = 0;
@@ -18,8 +19,12 @@ public class Ejercicio03 {
 		System.out.println("Introduzca su número de DNI para recibir su letra: ");
 		numeroDNI = reader.nextInt();
 
+		// Realizamos la operación.
 		letra = numeroDNI % 23;
 
+		// Si la letra (operación de arriba) es el número que representa la tabla
+		// entonces muestra la letra asociada a su DNI (justo detrás de su número de
+		// DNI).
 		switch (letra) {
 		case 0:
 			letraDNI = 'T';
@@ -92,8 +97,9 @@ public class Ejercicio03 {
 			break;
 		}
 
+		// Mostramos al usuario su DNI completo.
 		System.out.println("Su DNI es: " + numeroDNI + letraDNI);
-		
+
 		// Cerramos el scanner.
 		reader.close();
 

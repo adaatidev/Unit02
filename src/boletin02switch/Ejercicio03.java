@@ -31,8 +31,10 @@ public class Ejercicio03 {
 		reader.nextLine(); // Depura el código
 
 		// Le preguntamos al usuario qué operación quiere que se muestre.
-		System.out.println(
-				"¿Qué operación quiere que se muestre, (A) suma, (B) resta, (C) multiplicación, (D) división?");
+		System.out.println("A. SUMAR LOS NÚMEROS");
+		System.out.println("B. RESTAR LOS NÚMEROS");
+		System.out.println("C. MULTIPLICAR LOS NÚMEROS");
+		System.out.println("D. DIVIDIR LOS NÚMEROS");
 		answer = reader.nextLine();
 
 		// Preparamos las operaciones.
@@ -57,7 +59,7 @@ public class Ejercicio03 {
 		case "d" -> System.out.println("División de los números introducidos: " + d);
 		// Si la respuesta del usuario no es ninguna de las anteriores mostrará el
 		// siguiente mensaje.
-		default -> System.out.println("Debe introducir una operación nombrada.");
+		default -> System.out.println("Debe introducir la letra de una operación nombrada.");
 		}
 
 		// Cerramos el scanner.
