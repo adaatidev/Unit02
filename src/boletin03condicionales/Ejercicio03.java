@@ -92,9 +92,8 @@ public class Ejercicio03 {
 		case 21:
 			letraDNI = 'K';
 			break;
-		case 22:
+		default:
 			letraDNI = 'E';
-			break;
 		}
 
 		// Mostramos al usuario su DNI completo.
