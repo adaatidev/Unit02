@@ -17,7 +17,6 @@ public class Ejercicio03 {
 		int a;
 		int b;
 		int c;
-		double d;
 
 		// Preparamos el scanner.
 		Scanner reader = new Scanner(System.in);
@@ -35,14 +34,13 @@ public class Ejercicio03 {
 		System.out.println("B. RESTAR LOS NÚMEROS");
 		System.out.println("C. MULTIPLICAR LOS NÚMEROS");
 		System.out.println("D. DIVIDIR LOS NÚMEROS");
-		answer = reader.nextLine();
+		answer = reader.next();
 
 		// Preparamos las operaciones.
 		a = num1 + num2;
 		b = num1 - num2;
 		c = num1 * num2;
-		d = num1 / num2;
-
+		
 		// Preparamos el condicional.
 		switch (answer) {
 		// Si la respuesta del usuario es suma, mostrará la suma de los números que ha
@@ -56,7 +54,11 @@ public class Ejercicio03 {
 		case "c" -> System.out.println("Multiplicación de los números introducidos: " + c);
 		// Si la respuesta del usuario es división, mostrará la división de los números
 		// que ha introducido.
-		case "d" -> System.out.println("División de los números introducidos: " + d);
+		case "d"-> { if (num1 == 0 || num2 == 0) {
+			System.out.println("No se puede dividir.");
+		} else {
+			System.out.println("División de los números introducidos: " + (num1 / num2));
+		} }
 		// Si la respuesta del usuario no es ninguna de las anteriores mostrará el
 		// siguiente mensaje.
 		default -> System.out.println("Debe introducir la letra de una operación nombrada.");
