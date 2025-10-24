@@ -6,57 +6,52 @@ public class Exercise01 {
 
 	public static void main(String[] args) {
 
-		/*
-		 * Write a program to take an order for a new computer. The basic system costs
+		/* Write a program to take an order for a new computer. The basic system costs
 		 * 375.99. The user then has to choose from a 38 cm screen (costing 75.99) or a
 		 * 43 cm screen (costing 99.99). The following extras are optional.
-		 * 
 		 */
 
 		// Set the variables for
 		int screen;
-		double totalPrice = 0;
-		int extra;
+		double totalPrice = 375.99;
+		final double SCREEN_38 = 75.99;
+		final double SCREEN_43 = 99.99;
+		String answer;
 
 		// Set up the scanner.
 		Scanner reader = new Scanner(System.in);
 
 		// Ask the user about what size of screen they want.
-		System.out.println("Do you want a 38cm screen or a 43cm screen?");
+		System.out.println("Which screen do you prefer?");
+		System.out.println("1. 38cm - 75,99");
+		System.out.println("2. 43cm - 99,99");
 		screen = reader.nextInt();
 
-		// Set the conditional, if they chose the 38cm screen the price will increase
-		// 75.99, if they chose the 43cm screen the price will increase 99.99
-		if (screen == 38) {
-			totalPrice = (double) (375.99 + 75.99);
-		} else if (screen == 43) {
-			totalPrice = (double) (375.99 + 99.99);
-		} else {
-			System.out.println("You must chose between a 38cm screen and a 43cm screen.");
+		switch (screen) {
+		case 1:
+			totalPrice += SCREEN_38;
+			break;
+		case 2:
+			totalPrice += SCREEN_43;
+			break;
 		}
-
-		// Ask the user if they want any extras.
-		System.out.println("Do you want any of these extras?");
-		System.out.println("1. Antivirus Software");
-		System.out.println("2. Printer");
-		System.out.println("3. Nothing");
-		extra = reader.nextInt();
-
-		// Set another conditional, if the user wants extras the price will increase.
-		switch (extra) {
-		case 1 -> {
-			totalPrice = totalPrice + 65.99;
-			System.out.println("Total price: " + totalPrice);
+		
+		System.out.println("Do you want antivirus software? (Y / N)");
+		answer = reader.next();
+		
+		if (answer.equalsIgnoreCase("Y")) {
+			totalPrice += 65.99;
 		}
-		case 2 -> {
-			totalPrice = totalPrice + 125.00;
-			System.out.println("Total price: " + totalPrice);
+		
+		System.out.println("Do you want a printer? (Y / N)");
+		answer = reader.next();
+		
+		if  (answer.equalsIgnoreCase("Y")) {
+			totalPrice += 125.00;
 		}
-		default -> {
-			System.out.println("Total price: " + totalPrice);
-		}
-		}
-
+		
+		System.out.println("Total price = " + totalPrice);
+		
 		// Close the scanner.
 		reader.close();
 
