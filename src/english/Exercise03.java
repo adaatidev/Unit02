@@ -20,8 +20,8 @@ public class Exercise03 {
 		mirrorHour = reader.nextInt();
 		mirrorMinute = reader.nextInt();
 		
-		realHour = (mirrorMinute == 0) ? (12 - mirrorHour) : (11 - mirrorHour);
-		realMinute = (mirrorMinute == 0) ? 0 : 60 - mirrorMinute;
+		//realHour = (mirrorMinute == 0) ? (12 - mirrorHour) : (11 - mirrorHour);
+		//realMinute = (mirrorMinute == 0) ? 0 : 60 - mirrorMinute;
 		
 		if (realHour < 10) {
 			System.out.println("0");
