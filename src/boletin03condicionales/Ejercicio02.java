@@ -10,6 +10,13 @@ public class Ejercicio02 {
 		 * Utiliza un operador ternario para calcular el valor absoluto de un número que
 		 * se solicita al usuario por teclado.
 		 */
+		
+		/*
+		 * PRUEBA
+		 * Número introducido: -8
+		 * Respuesta esperada: 8
+		 * Respuesta obtenida: 8
+		 */
 
 		// Declaramos la variable que va a tomar el número que introduzca el usuario.
 		int numero;

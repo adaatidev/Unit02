@@ -35,10 +35,18 @@ public class Ejercicio04 {
 		System.out.println("Introduzca aquí la solución: ");
 		resultadoUsuario = reader.nextInt();
 
-		/* Declaramos el condicional (si la respuesta introducida por el usuario es
-		* igual que la respuesta correcta), si la suma está bien muestra que está bien,
-		* si está mal muestra que está mal y el resultado correcto.
-		*/ 
+		/*
+		 * Declaramos el condicional (si la respuesta introducida por el usuario es
+		 * igual que la respuesta correcta), si la suma está bien muestra que está bien,
+		 * si está mal muestra que está mal y el resultado correcto.
+		 */
+
+		// Comprobamos la solución
+		resultadoCorrecto = numero1 + numero2;
+
+		// Declaramos la condición, si el resultado correcto es igual que la respuesta
+		// del usuario entonces escribe que la solución es correcta, si no escribe que
+		// no es correcta
 		if (resultadoUsuario == resultadoCorrecto) {
 			System.out.println("¡La solución es correcta!");
 		} else {

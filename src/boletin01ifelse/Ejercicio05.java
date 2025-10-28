@@ -26,9 +26,9 @@ public class Ejercicio05 {
 		} else if (respuesta1.equals("piedra") && respuesta2.equals("tijeras")
 				|| respuesta1.equals("tijeras") && respuesta2.equals("papel")
 				|| respuesta1.equals("papel") && respuesta2.equals("piedra")) {
-			System.out.println("Jugador1 ganador.");
+			System.out.println("¡Ha ganado el jugador 1!");
 		} else {
-			System.out.println("Jugador2 ganador.");
+			System.out.println("¡Ha ganado el jugador 2!");
 		}
 
 		// Cerramos el scanner.

@@ -6,6 +6,13 @@ public class Ejercicio03 {
 
 	public static void main(String[] args) {
 
+		/*
+		 * PRUEBA
+		 * Número introducido: 77925372
+		 * Respuesta esperada: 77925372S
+		 * Respuesta obtenida: 77925372S
+		 */
+		
 		// Declaramos la variable para el número del DNI del usuario, otra para la letra
 		// (en números enteros) y la letra del DNI que va a mostrar.
 		int numeroDNI;

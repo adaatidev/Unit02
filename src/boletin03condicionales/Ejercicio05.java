@@ -14,6 +14,11 @@ public class Ejercicio05 {
 		 * de estancia los debes solicitar al usuario por teclado.
 		 */
 
+		/*
+		 * PRUEBA Días que voy a introducir: 8 Distancia que voy a introducir: 888
+		 * Respuesta esperada (precio del billete): 1554€ Respuesta obtenida: 1554€
+		 */
+
 		// Declaramos las variables de los días y la distancia a recorrer por el
 		// usuario.
 		int dias;
@@ -30,11 +35,14 @@ public class Ejercicio05 {
 		System.out.println("¿Cuánta distancia en KM va a recorrer?");
 		distancia = reader.nextInt();
 
+		// Declaramos la condición, si los días son menor o igual que 7 y la distancia
+		// menor o igual que 800km no recibe ningún descuento en el billete, si no
+		// recibe un descuento de un 30%
 		if (dias <= 7 && distancia <= 800) {
 			precioBillete = distancia * 2.5;
 			System.out.println("El precio de su billete es: " + precioBillete + "€");
 		} else {
-			precioBillete = (distancia * 2.5);
+			precioBillete = (double) (distancia * 2.5);
 			precioBillete = (precioBillete * 0.3 - precioBillete) * -1;
 			System.out.println("El precio de su billete es: " + precioBillete + "€");
 		}

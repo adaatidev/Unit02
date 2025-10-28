@@ -12,6 +12,13 @@ public class Ejercicio01 {
 		 * Un número es capicúa si se lee igual de izquierda a derecha que de derecha a
 		 * izquierda.
 		 */
+		
+		/*
+		 * PRUEBA
+		 * Número que voy a introducir: 888
+		 * Respuesta esperada: Número capicúa
+		 * Respuesta obtenida: Número capicúa
+		 */
 
 		// Declaramos la variable en la que se almacena el número que introduce el
 		// usuario.
