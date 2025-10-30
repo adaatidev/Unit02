@@ -54,11 +54,13 @@ public class Ejercicio03 {
 		case "c" -> System.out.println("Multiplicación de los números introducidos: " + c);
 		// Si la respuesta del usuario es división, mostrará la división de los números
 		// que ha introducido.
-		case "d"-> { if (num1 == 0 || num2 == 0) {
-			System.out.println("No se puede dividir.");
-		} else {
+		case "d"-> { if (num2 != 0) {
 			System.out.println("División de los números introducidos: " + (num1 / num2));
-		} }
+			
+		} else {
+			System.out.println("No se puede dividir.");
+		} 
+		}
 		// Si la respuesta del usuario no es ninguna de las anteriores mostrará el
 		// siguiente mensaje.
 		default -> System.out.println("Debe introducir la letra de una operación nombrada.");

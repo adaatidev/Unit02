@@ -14,31 +14,52 @@ public class Ejercicio04 {
 		 * 
 		 */
 
-		// Declaramos las variables para un número, un contador de números, la suma de positivos, la suma de negativos, el contador de negativos y el contador de ceros.
+		// Declaramos las variables para un número, un contador de números, la suma de
+		// positivos, la suma de negativos, el contador de negativos y el contador de
+		// ceros.
 		int numero;
-		int contador;
-		int sumaPositivos;
-		int sumaNegativos;
-		int contadorNegativos;
-		int contadorCeros;
+		int contador = 0;
+		int sumaPositivos = 0;
+		int sumaNegativos = 0;
+		int contadorNegativos = 0;
+		int mediaNegativos = 0;
+		int contadorCeros = 0;
 
 		// Preparamos el scanner.
 		Scanner reader = new Scanner(System.in);
-		
+
 		while (contador < 10) {
-			//Pedimos un número.
+			// Pedimos un número.
 			System.out.println("Introduzca un número");
 			numero = reader.nextInt();
-			//Sumamos al contador
+			// Sumamos al contador
 			contador++;
+			// Si el numero es mayor que cero se suman los números positivos
 			if (numero > 0) {
-				sumaPositivo                                                                                                                                                                                                                                                                                                                                                                                                                                 
-			}
-		}
+				sumaPositivos += numero;
+				// Si el numero es menor que cero se suman los números negativos y se le suma
+				// uno a su contador
+			} else if (numero < 0) {
+				sumaNegativos += numero;
+				contadorNegativos++;
+				// Si no es ninguno de los casos anteriores, es cero, se le suma uno a su
+				// contador
+			} else {
+				contadorCeros++;
+			} // Fin if
+		} // Fin while
+
+		// Calculamos la media
+		mediaNegativos = sumaNegativos / contadorNegativos;
+
+		// Mostramos el resultado
+		System.out.println("Suma de todos los positivos: " + sumaPositivos);
+		System.out.println("Media de números negativos: " + mediaNegativos);
+		System.out.println("Contador de ceros: " + contadorCeros);
 
 		// Cerramos el scanner.
 		reader.close();
 
-	}
+	}// Fin main
 
-}
+}// Fin clase
