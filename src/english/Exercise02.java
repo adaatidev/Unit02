@@ -32,16 +32,20 @@ public class Exercise02 {
 		// be increased.
 		switch (type) {
 		case "B" -> {
-			moneyB = (money * 2 / 100) - money * -1;
-			System.out.println("Money: " + moneyB);
+			moneyB = (money * 2 / 100) - money;
+			System.out.println("Money: " + moneyB*-1);
 		}
 		case "X" -> {
-			moneyX = (money * 5 / 100) - money * -1;
-			System.out.println("Money: " + moneyX);
+			moneyX = (money * 5 / 100) - money;
+			System.out.println("Money: " + moneyX*-1);
 		}
-		default -> {
-			moneyAC = (money * 1.5 / 100) - money * -1;
-			System.out.println("Money: " + moneyAC);
+		case "A" -> {
+			moneyAC = (money * 1.5 / 100) - money;
+			System.out.println("Money: " + moneyAC*-1);
+		}
+		case "C" -> {
+			moneyAC = (money * 1.5 / 100) - money;
+			System.out.println("Money: " + moneyAC*-1);
 		}
 		}
 
