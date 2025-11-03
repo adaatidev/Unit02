@@ -30,13 +30,13 @@ public class Ejercicio05 {
 		// Le pedimos al usuario un número
 		System.out.println("Introduzca un número");
 		numero = reader.nextInt();
-
+		
 		do {
 			numAleatorio = rand.nextInt(min, max);
 			System.out.println("¿Es " + numAleatorio + "?");
 			respuesta = reader.next();
 			
-			if (respuesta.equals("menor"))
+			if (respuesta.equals("menor")) {
 				max = numAleatorio;
 			
 			} else if (respuesta.equals("mayor")) {
