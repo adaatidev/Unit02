@@ -24,6 +24,6 @@ public class Ejercicio01 {
 		// Cerramos el scanner
 		reader.close();
 
-	}
+	}// Fin de main
 
-}
+}// Fin de clase
