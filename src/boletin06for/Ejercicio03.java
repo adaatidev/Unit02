@@ -9,29 +9,29 @@ public class Ejercicio03 {
 		// Creamos la variable para el número introducido por el usuario
 		int numero = 0;
 
-		// Constante de cantidad de números introducidos
-		final int CANTIDAD = 10;
-		
+		// Creamos la variable para el número almacenado
+		int numeroTotal = 0;
+
 		// Creamos la variable para la media
-		int media = 0;
+		double media = 0;
 
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
 
-		//Le pedimos un número al usuario
-		System.out.println("Introduzca un número");
-		numero = reader.nextInt();
-		
-		for (int contador = 1; contador < 10; contador++) {
-			numero += numero;
+		// El contador empieza a 1, mientras que sea menor o igual que 10, cuando
+		// termine se incrementa 1
+		for (int contador = 1; contador <= 10; contador++) {
 			System.out.println("Introduzca un número");
 			numero = reader.nextInt();
+			numeroTotal = numero + numeroTotal;
 		}
 
-		media = numero / CANTIDAD;
-		
+		// Calculamos la media
+		media = numeroTotal / 10.0;
+
+		// Mostramos la media
 		System.out.println("La media de los números introducidos es " + media);
-		
+
 		// Cerramos el scanner
 		reader.close();
 
