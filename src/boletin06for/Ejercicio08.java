@@ -26,10 +26,20 @@ public class Ejercicio08 {
 		numeroA = reader.nextInt();
 		numeroB = reader.nextInt();
 
-		for (int cont = 0; cont <= resta; cont++) {
-
-		}
-
+		if (numeroA < numeroB) {
+			resta = numeroB - numeroA;
+			for (int cont = 0; cont <= resta; cont++) {
+				System.out.println("Números desde A hasta B: " + numeroA);
+				numeroA++;
+			}// Fin de for
+		} else {
+			resta = numeroA - numeroB;
+			for (int cont = 0; cont <= resta; cont++) {
+				System.out.println("Números desde B hasta A: " + numeroB);
+				numeroB++;
+			}// Fin de for
+		}// Fin de if
+		
 		// Cerramos el scanner
 		reader.close();
 
