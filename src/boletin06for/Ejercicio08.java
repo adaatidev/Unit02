@@ -12,34 +12,38 @@ public class Ejercicio08 {
 		// números desde B hasta A.
 
 		// Varaiable para los dos números
-		int numeroA = 0;
-		int numeroB = 0;
+		int numA = 0;
+		int numB = 0;
 
 		// Variable para la diferencia
-		int resta = 0;
+		int menor;
+		int mayor;
 
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
 
 		// Preguntamos al usuario por dos notas
 		System.out.println("Introduzca dos números");
-		numeroA = reader.nextInt();
-		numeroB = reader.nextInt();
+		numA = reader.nextInt();
+		numB = reader.nextInt();
 
-		if (numeroA < numeroB) {
-			resta = numeroB - numeroA;
-			for (int cont = 0; cont <= resta; cont++) {
-				System.out.println("Números desde A hasta B: " + numeroA);
-				numeroA++;
-			}// Fin de for
+		// menor = Math.min(numA, numB);
+		// mayor = Math.max(numA, numB);
+
+		// Comprobación de qué número es mayor
+		if (numA < numB) {
+			menor = numA;
+			mayor = numB;
 		} else {
-			resta = numeroA - numeroB;
-			for (int cont = 0; cont <= resta; cont++) {
-				System.out.println("Números desde B hasta A: " + numeroB);
-				numeroB++;
-			}// Fin de for
-		}// Fin de if
-		
+			menor = numB;
+			mayor = numA;
+		} // Fin de if
+
+		// Vamos desde el número más pequeño al más grande
+		for (int cont = menor; cont <= mayor; cont++) {
+			System.out.println(cont);
+		} // Fin de for
+
 		// Cerramos el scanner
 		reader.close();
 

@@ -10,7 +10,7 @@ public class Ejercicio07 {
 		// es primo o no.
 
 		// Variable para el número
-		int numero = 0;
+		int num = 0;
 
 		// Boolean
 		boolean esPrimo = true;
@@ -19,20 +19,27 @@ public class Ejercicio07 {
 		Scanner reader = new Scanner(System.in);
 
 		// Le preguntamos un número al usuario
-		System.out.println("Introduzca un número");
-		numero = reader.nextInt();
+		System.out.println("Introduzca un número entero positivo");
+		num = reader.nextInt();
 
-		// Condicional, si el número es 1 no es primo, luego false
-		if (numero == 1) {
-			esPrimo = false;
-		}
-
-		for (int cont = 2; cont < numero; cont++) {
-			if (numero % cont == 0) {
+		if (num > 0) {
+			// Si es positivo entonces hacemos el estudio de si es primo
+			if (num == 1) {
 				esPrimo = false;
+			} else {
+				// Si es distinto de 1
+				for (int cont = 2; cont < num; cont++) {
+					if (num % cont == 0) {
+						esPrimo = false;
+						break;
+					}
+				}
 			}
+			
+		} else {
+			System.out.println("El valor introducido no es válido.");
 		}
-		
+
 		// Imprimimos la solución
 		System.out.println("¿El número introducido es primo?");
 		if (esPrimo) {
