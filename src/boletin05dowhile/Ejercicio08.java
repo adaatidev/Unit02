@@ -22,6 +22,8 @@ public class Ejercicio08 {
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
 
+		
+		
 		// Cerramos el scanner
 		reader.close();
 

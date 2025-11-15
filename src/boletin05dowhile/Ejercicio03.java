@@ -22,11 +22,13 @@ public class Ejercicio03 {
 		System.out.println("Introduzca un número");
 		numero = reader.nextInt();
 
+		// La suma sigue hasta que llega al número que ha introducido el usuario
 		do {
 			suma += contador;
 			contador++;
 		} while (contador <= numero);
 
+		// Mostramos la respuesta
 		System.out.println("La suma total es: " + suma);
 
 		// Cerramos el scanner
