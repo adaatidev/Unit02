@@ -11,20 +11,30 @@ public class Ejercicio04 {
 		// máximo de los dos e ir incrementando hasta encontrar el primer número que sea
 		// múltiplo de los dos números.
 
-		// Variable para los dos números
+		// Variable para el primer número
 		int numA;
+
+		// Variable para el primer número
 		int numB;
 
+		// Variable para el número mayor de los dos
+		int max;
+
 		// Creamos el scanner
-		Scanner reader = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
 		// Le pedimos dos números al usuario
 		System.out.println("Introduzca dos números");
-		numA = reader.nextInt();
-		numB = reader.nextInt();
+		numA = sc.nextInt();
+		numB = sc.nextInt();
+
+		// Comprobamos el mayor de los dos
+		max = Math.max(numA, numB);
+		
+		
 
 		// Cerramos el scanner
-		reader.close();
+		sc.close();
 
 	} // Fin de main
 

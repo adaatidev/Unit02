@@ -9,10 +9,10 @@ public class Ejercicio02 {
 		// Realiza un programa que nos pida un número n y nos diga cuántos números hay
 		// entre 1 y n que sean primos.
 
-		// Variable para el número introducido por el usuario
+		// Número introducido por el usuario
 		int numero;
 
-		// Variable para el contador
+		// Contador para saber cuántos primos hay
 		int contador = 0;
 
 		// Booleano para los primos
@@ -26,12 +26,12 @@ public class Ejercicio02 {
 		numero = sc.nextInt();
 
 		// Bucle que recorre los números desde el dos hasta el número introducido
-		for (int i = 2; i < numero; i++) {
+		for (int i = 2; i <= numero; i++) {
 			esPrimo = true;
 
 			// Bucle que calcula si el número es primo
-			for (int cont = i - 1; cont != 1; cont--) {
-				if (i % cont == 0) {
+			for (int j = i - 1; j != 1; j--) {
+				if (i % j == 0) {
 					esPrimo = false;
 				}
 			}
