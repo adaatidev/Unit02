@@ -9,45 +9,54 @@ public class Ejercicio02 {
 		// Realiza un programa que nos pida un número n y nos diga cuántos números hay
 		// entre 1 y n que sean primos.
 
-		// Número introducido por el usuario
-		int numero;
-
 		// Contador para saber cuántos primos hay
-		int contador = 0;
+		int cuentaPrimos = 0;
 
-		// Booleano para los primos
+		// Número introducido por el usuario
+		int num;
+
+		// Variable para el while que comprueba si el número es primo
+		int divisor;
+
+		// Variable para indicar si un número es primo
 		boolean esPrimo;
 
-		// Creamos el scanner
+		// Scanner para leer del teclado
 		Scanner sc = new Scanner(System.in);
 
-		// Le preguntamos un número al usuario
-		System.out.println("Introduce el número");
-		numero = sc.nextInt();
+		// Le pedimos un número al usuario
+		System.out.println("Introduce un número");
+		num = sc.nextInt();
 
-		// Bucle que recorre los números desde el dos hasta el número introducido
-		for (int i = 2; i <= numero; i++) {
+		// Recorremos todos los números del 2 hasta num
+		for (int cont = 2; cont <= num; cont++) {
+			// Inicializamos el divisor a 2
+			divisor = 2;
+
+			// volvemos a poner esPrimo a true
 			esPrimo = true;
 
-			// Bucle que calcula si el número es primo
-			for (int j = i - 1; j != 1; j--) {
-				if (i % j == 0) {
+			// comprobamos si cont es primo
+			while (divisor < cont && esPrimo) {
+				if (cont % divisor == 0) {
 					esPrimo = false;
 				}
-			}
+				divisor++;
+			} // fin while
 
-			// Si el número es primo incrementamos el contador
+			// Miramos si el número es primo
 			if (esPrimo) {
-				contador++;
-			}
-		}
+				cuentaPrimos++;
+			} // fin if esPrimo
 
-		// Mostramos la cantidad
-		System.out.println("Hay " + contador + " numeros primos entre 1 y " + numero);
+		} // fin for
 
-		// Cerramos el scanner
+		// Imprimimos cuántos primos hay
+		System.out.println("Hay " + cuentaPrimos + " números primos");
+
+		// Cerramos scanner
 		sc.close();
 
-	} // Fin de main
+	} // Fin main
 
-} // Fin de clase
+} // Fin clase
