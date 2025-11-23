@@ -8,9 +8,9 @@ public class Ejercicio06 {
 
 		// Solicita al usuario un número n y dibuja un triángulo de base y altura n. Por
 		// ejemplo para n=4 debe dibujar lo siguiente:
-		// *
-		// * *
-		// * * *
+		//    *
+		//   * *
+		//  * * *
 		// * * * *
 
 		// Número introducido por el usuario
@@ -25,12 +25,18 @@ public class Ejercicio06 {
 		// Si el número introducido es mayor o igual que 1 se ejecuta el código, sino,
 		// imprime que el valor no es válido
 		if (num >= 1) {
-			// Bucle para escribir los *
+			//
 			for (int i = 1; i <= num; i++) {
-				// Bucle para los espacios
-				for (int j = num - 1; j > 0; j--) {
-					System.out.print(" ");
+				//
+				for (int j = 1; j <= num; j++) {
+					//
+					if (j <= num - i) {
+						System.out.print(" ");
+					} else {
+						System.out.print("* ");
+					}
 				} // Fin for
+				System.out.println();
 			} // Fin for
 		} else {
 			System.out.println("El valor introducido no es válido");
@@ -40,5 +46,4 @@ public class Ejercicio06 {
 		sc.close();
 
 	} // Fin main
-
 } // Fin clase

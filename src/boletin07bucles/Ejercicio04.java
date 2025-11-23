@@ -31,8 +31,16 @@ public class Ejercicio04 {
 		// Comprobamos el mayor de los dos
 		max = Math.max(numA, numB);
 		
+		if (numA >= 0 && numB >= 0) {
+			while (max % numA != 0 || max % numB != 0) {
+				max++;
+			}
+		} else {
+			System.out.println("El valor introducido no es válido");
+		}
 		
-
+		System.out.println("El mcm de ambos números es " + max);
+		
 		// Cerramos el scanner
 		sc.close();
 
